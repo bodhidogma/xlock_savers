@@ -1,0 +1,146 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+#include "scrnsave.h"
+#include "rotor.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+ID_APP                  ICON    DISCARDABLE     "Rotor.ico"
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "#include ""scrnsave.h""\r\n"
+    "#include ""rotor.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    DLG_SCRNSAVECONFIGURE, DIALOG
+    BEGIN
+        LEFTMARGIN, 1
+        RIGHTMARGIN, 206
+        TOPMARGIN, 1
+        BOTTOMMARGIN, 128
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+DLG_SCRNSAVECONFIGURE DIALOG DISCARDABLE  0, 0, 207, 130
+STYLE DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Configure Rotor Spirograph"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,155,10,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,155,30,50,14
+    PUSHBUTTON      "Resert",IDC_DEFAULT,155,55,50,14
+    EDITTEXT        IDC_SEGCOUNT,48,19,20,12,ES_NUMBER
+    EDITTEXT        IDC_SEGLEN,109,19,20,12,ES_NUMBER
+    EDITTEXT        IDC_CLRSTART,48,54,20,12,ES_NUMBER
+    EDITTEXT        IDC_CLRINC,109,54,20,12,ES_NUMBER
+    EDITTEXT        IDC_ROTORCNT,48,86,20,12,ES_NUMBER
+    SCROLLBAR       IDC_ROTORSPEED,90,88,110,10,SBS_LEFTALIGN | WS_TABSTOP
+    GROUPBOX        "&Rotor Segments",IDC_STATIC,5,5,140,29
+    LTEXT           "Number:",IDC_STATIC,17,23,28,8
+    LTEXT           "Length:",IDC_STATIC,84,23,25,8
+    GROUPBOX        "&Color Cycling",IDC_STATIC,5,40,140,29
+    LTEXT           "Start Color:",IDC_STATIC,9,58,35,8
+    LTEXT           "Speed:",IDC_STATIC,85,58,24,8
+    GROUPBOX        "&General",IDC_STATIC,5,75,200,25
+    LTEXT           "Rotors:",IDC_STATIC,20,90,24,8
+    LTEXT           "Slower",IDC_STATIC,90,80,22,8
+    LTEXT           "Faster",IDC_STATIC,180,80,20,8
+    ICON            ID_APP,IDC_STATIC,10,105,18,20,SS_SUNKEN
+    CTEXT           "1995  Paul McAvoy - paulmcav@silcom.com\nA port from the XLock collection.",
+                    IDC_STATIC,45,112,150,16
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_DESCRIPTION         "Rotor Spirograph"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_SEGLEN              "SegLength"
+    IDS_SEGCOUNT            "SegCount"
+    IDS_CLRSTART            "ColorStart"
+    IDS_CLRSPEED            "ColorSpeed"
+    IDS_INIFILE             "control.ini"
+    IDS_ROTORCNT            "RotorCnt"
+    IDS_SPEED               "Speed"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    idsScreenSaver          "Rotor32 Spirograph"
+    idsAppName              "Screen Saver.Rotor Spirograph"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+

@@ -1,0 +1,16 @@
+
+This folder contains a collection of the Unix Xlock screen saver ports for Win32.
+
+I originally did the work ca. 1995 under MSVC4.  I cannot vouch for the correctness of the code or if they will compile correctly.
+
+Command line options:
+ /s - start saver
+ /c - start saver in cfg mode
+
+
+Clean all cruft:
+		UNIX: for i in $(echo "Debug Release *.ncb *.opt *.plg");do find . -iname $i -exec rm -rf '{}' ';';done
+
+Enjoy!
+
+-Paul
