@@ -219,8 +219,8 @@ void MoveImage(HWND hWnd)
 	swarmstruct *sp = &swarms;
 	
 	hDC = GetDC(hWnd);									// get HDC to this window
-	hpenBlack = GetStockObject(BLACK_PEN);				// get a black pen			
-	hpenWhite = GetStockObject(WHITE_PEN);				// get a black pen			
+	hpenBlack = (HPEN)GetStockObject(BLACK_PEN);				// get a black pen			
+	hpenWhite = (HPEN)GetStockObject(WHITE_PEN);				// get a black pen			
 		
     SelectPalette(hDC, hPal, 0);
     RealizePalette(hDC);
@@ -299,7 +299,7 @@ void MoveImage(HWND hWnd)
     	sp->old_segs[b].y2 = Y(2,b);
     }
     	        
-	hpenOld = SelectObject(hDC, hpenBlack);     // select the black pen			
+	hpenOld = (HPEN)SelectObject(hDC, hpenBlack);     // select the black pen			
 	MoveToEx(hDC, sp->wx[1], sp->wy[1], NULL);  // erase the old lines
 	LineTo(hDC, sp->wx[2], sp->wy[2]);	
 	DrawSegments(hDC, sp->old_segs, sp->beecount);
