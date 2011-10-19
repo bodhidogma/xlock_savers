@@ -223,7 +223,7 @@ static void MoveImage(HWND hWnd) {
     SelectPalette(hDC, hPal, 0);
     RealizePalette(hDC);
 
-	hbrOld = SelectObject(hDC, (HBRUSH)GetStockObject(BLACK_BRUSH));     // select the black pen			
+	hbrOld = (HBRUSH)SelectObject(hDC, (HBRUSH)GetStockObject(BLACK_BRUSH));     // select the black pen			
 	// Mask center point
 	Ellipse(hDC, REC_CORNERS(gp->width/2, gp->height/2, gp->sr));   	
 
