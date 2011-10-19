@@ -37,7 +37,7 @@ LRESULT WINAPI ScreenSaverProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lP
 		vLoadStrings();
 		GetIniSettings();
 
-		wTimer - SetTimer(hWnd, ID_TIMER, wElapse, NULL);	// create timer for image refresh
+		wTimer = SetTimer(hWnd, ID_TIMER, wElapse, NULL);	// create timer for image refresh
 
 		GetClientRect(hWnd, &rc);
 		fs->centerx = rc.right / 2;
@@ -227,8 +227,8 @@ void MoveImage(HWND hWnd)
 	SelectPalette(hDC, hPal, 0);
 	RealizePalette(hDC);
 
-	hpenBlack = GetStockObject(BLACK_PEN);	// get a black pen			
-	hpenOld = SelectObject(hDC, hpenBlack);
+	hpenBlack = (HPEN)GetStockObject(BLACK_PEN);	// get a black pen			
+	hpenOld = (HPEN)SelectObject(hDC, hpenBlack);
 	        
 	for (rp = 0; rp < iSegCnt; rp++) {		// loop for REPS times
 		thisx = fs->centerx;				// save center x & y
@@ -283,7 +283,7 @@ void MoveImage(HWND hWnd)
 				fs->r = 0;
 
 			hpenColor = CreatePen(PS_SOLID, 1, PALETTEINDEX(fs->r));
-			hpenOld = SelectObject(hDC, hpenColor);
+			hpenOld = (HPEN)SelectObject(hDC, hpenColor);
 			
 			x1 = fs->lastx;											// get new positions
 			y1 = fs->lasty;

@@ -108,7 +108,7 @@ BEGIN
     LTEXT           "Slower",IDC_STATIC,90,80,22,8
     LTEXT           "Faster",IDC_STATIC,180,80,20,8
     ICON            ID_APP,IDC_STATIC,10,105,18,20,SS_SUNKEN
-    CTEXT           "1995  Paul McAvoy - paulmcav@silcom.com\nA port from the XLock collection.",
+    CTEXT           "1995  Paul McAvoy - paulmcav@queda.net\nA port from the XLock collection.",
                     IDC_STATIC,45,112,150,16
 END
 
