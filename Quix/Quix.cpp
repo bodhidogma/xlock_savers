@@ -203,12 +203,12 @@ void MoveImage(HWND hWnd) {
 	int			i;
 		
 	hDC = GetDC(hWnd);									// get HDC to this window
-	hpenBlack = GetStockObject(BLACK_PEN);				// get a black pen			
+	hpenBlack = (HPEN)GetStockObject(BLACK_PEN);				// get a black pen			
 	//hpenWhite = GetStockObject(WHITE_PEN);				// get a black pen			
 
     SelectPalette(hDC, hPal, 0);
     RealizePalette(hDC);
-	hpenOld = SelectObject(hDC, hpenBlack);     			// select the black pen			
+	hpenOld = (HPEN)SelectObject(hDC, hpenBlack);     			// select the black pen			
 
 	if (!iRainbow) {
 		if (qp->ColorCount++ > (PALSIZE-21)) qp->ColorCount = 1;		
