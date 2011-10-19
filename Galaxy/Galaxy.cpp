@@ -223,12 +223,12 @@ void MoveImage(HWND hWnd)
 	RECT rc;
 
 	hDC = GetDC(hWnd);									// get HDC to this window
-	hpenBlack = GetStockObject(BLACK_BRUSH);				// get a black pen			
+	hpenBlack = (HBRUSH)GetStockObject(BLACK_BRUSH);				// get a black pen			
 	
 	SelectPalette(hDC, hPal, 0);
     RealizePalette(hDC);
     	        
-	hpenOld = SelectObject(hDC, hpenBlack);     // select the black pen			
+	hpenOld = (HBRUSH)SelectObject(hDC, hpenBlack);     // select the black pen			
 
     if(gp->init){
 		double w1, w2, w3;                     /* more tmp */
