@@ -9,7 +9,7 @@ Command line options:
 
 
 Clean all cruft:
-		UNIX: for i in $(echo "Debug Release *.ncb *.opt *.plg");do find . -iname $i -exec rm -rf '{}' ';';done
+		UNIX: for i in $(echo "Debug Release *.ncb *.opt *.plg *.aps");do find . -iname "$i" -exec rm -rf '{}' ';';done
 
 Enjoy!
 

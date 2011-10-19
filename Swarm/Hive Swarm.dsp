@@ -93,11 +93,11 @@ LINK32=link.exe
 # PROP Default_Filter "cpp;c;cxx;rc;def;r;odl;idl;hpj;bat"
 # Begin Source File
 
-SOURCE="\\vmware-host\Shared Folders\pmcavoy\src\SSavers\xlock_win32\Swarm\Swarm.cpp"
+SOURCE=".\Swarm.cpp"
 # End Source File
 # Begin Source File
 
-SOURCE="\\vmware-host\Shared Folders\pmcavoy\src\SSavers\xlock_win32\Swarm\swarm.rc"
+SOURCE=".\swarm.rc"
 # End Source File
 # End Group
 # Begin Group "Header Files"
@@ -105,11 +105,11 @@ SOURCE="\\vmware-host\Shared Folders\pmcavoy\src\SSavers\xlock_win32\Swarm\swarm
 # PROP Default_Filter "h;hpp;hxx;hm;inl"
 # Begin Source File
 
-SOURCE="\\vmware-host\Shared Folders\pmcavoy\src\SSavers\xlock_win32\Swarm\resource.h"
+SOURCE=".\resource.h"
 # End Source File
 # Begin Source File
 
-SOURCE="\\vmware-host\Shared Folders\pmcavoy\src\SSavers\xlock_win32\Swarm\Swarm.h"
+SOURCE=".\Swarm.h"
 # End Source File
 # End Group
 # Begin Group "Resource Files"
@@ -117,7 +117,7 @@ SOURCE="\\vmware-host\Shared Folders\pmcavoy\src\SSavers\xlock_win32\Swarm\Swarm
 # PROP Default_Filter "ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe"
 # Begin Source File
 
-SOURCE="\\vmware-host\Shared Folders\pmcavoy\src\SSavers\xlock_win32\Swarm\Swarm.ico"
+SOURCE=".\Swarm.ico"
 # End Source File
 # End Group
 # End Target
