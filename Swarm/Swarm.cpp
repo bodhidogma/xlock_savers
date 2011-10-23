@@ -7,8 +7,12 @@
 		Ported from the xlockmore package to 16-bit Windows
 		Ported to Win32 from 16-bit Windows
 
+	NOTE: http://msdn.microsoft.com/en-us/library/cc144066(VS.85).aspx
 */
 
+#ifndef UNICODE
+#define UNICODE
+#endif
 
 #include <windows.h> 
 #include <scrnsave.h>
@@ -436,12 +440,11 @@ BOOL SetIniSettings(void)
 
 void WriteProfileInt(LPCTSTR szSection, LPCTSTR szKey, int i, LPCTSTR szRoot)
 {
-    char achBuf[40];
-
     /* write out as unsigned because GetPrivateProfileInt() can't
      * cope with signed values!
      */
-    wsprintf(achBuf, "%u", i);
+	wchar_t achBuf[40];
+    wsprintfW(achBuf, L"%u", i);
     WritePrivateProfileString(szSection, szKey, achBuf, szRoot);
 }
 

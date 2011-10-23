@@ -27,7 +27,7 @@ Package=<4>
 
 ###############################################################################
 
-Project: "Hive Swarm"=".\Swarm\Hive Swarm.dsp" - Package Owner=<4>
+Project: "Hive Swarm"=".\Swarm\VS6\Hive Swarm.dsp" - Package Owner=<4>
 
 Package=<5>
 {{{
